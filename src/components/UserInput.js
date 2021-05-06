@@ -6,7 +6,7 @@ import 'react-day-picker/lib/style.css';
 function UserInput() {
     const { messages, userClickedYes, userSelectedDate, userClickedNo, showUserInput, resetChat } = useContext(ChatContext);
     const yesMessages = ['Yes I do!', 'Delivery', 'Yes'];
-    const noMessages = ['Nope', 'Pick-Up', 'No'];
+    const noMessages = ['No', 'No thanks!', 'No'];
     const userMessageCount = messages.reduce((count, message) => {
         if (!message.isAdmin) {
             count++;

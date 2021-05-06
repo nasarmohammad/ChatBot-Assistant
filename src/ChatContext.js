@@ -15,7 +15,7 @@ const ChatContextProvider = (props) => {
             { message: "Do you want help with your recent order delivery?", id: uuid(), isAdmin: true }
         ],
         [
-            { message: "Do you like to get it delivered or want to change the delivery to a pickup?", id: uuid(), isAdmin: true }
+            { message: "Do you like to get it delivered or want to change the delivery date?", id: uuid(), isAdmin: true }
         ],
         [
             { message: "Your delivery is set for next week, would you like to change your delivery date?", id: uuid(), isAdmin: true },
@@ -24,10 +24,9 @@ const ChatContextProvider = (props) => {
             { message: "What is your desired date?", id: uuid(), isAdmin: true }
         ],
         [
-            { message: "Thankyou for walking me through your preferences, Your package will be delivered accordingly, Have a great day ahead!", id: uuid(), isAdmin: true }
+            { message: "Thank you for walking me through your preferences, Your package will be delivered accordingly, Have a great day ahead!", id: uuid(), isAdmin: true }
         ]
     ];
-
     const addNextAdminMessage = () => {
         setIsLoading(true);
         setShowUserInput(false);
@@ -37,10 +36,19 @@ const ChatContextProvider = (props) => {
             setMessages(messages => {
                 const userMessageCount = messages.reduce((count, message) => {
                     if (!message.isAdmin) {
-                        count++;
+                        if(message.message === "No" || message.message === "No thanks!")
+                        {
+                            alert("Thank you for using our service. Redirecting you back to the Assistant's home page.")
+                            resetChat();
+                            
+                        }
+                        else{
+                             count++;
+                        }
                     }
                     return count;
                 }, 0);
+                console.log(userMessageCount)
                 return [
                     ...messages,
                     ...pendingMessages[userMessageCount]
