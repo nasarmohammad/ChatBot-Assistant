@@ -1,0 +1,127 @@
+.chats {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /*remove if it breaks */
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: auto;
+}
+
+.chat_message {
+  position: relative;
+  font-size: 16px;
+  padding: 10px;
+  background-color: #e6e2e1;
+  border-radius: 10px;
+  width: fit-content;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.chat_message_user {
+  background-color: #4e78f6;
+  color: white;
+}
+
+.chats_room {
+  display: flex;
+}
+
+.chats_room_user {
+  justify-content: flex-end;
+}
+
+.chat_dp {
+  height: 40px;
+  width: 40px;
+  padding-right: 10px;
+}
+
+.dp {
+  display: flex;
+  flex: 0.05;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat_text {
+  display: flex;
+}
+
+.loading {
+  padding: 20px;
+  height: 40px;
+  width: 70px;
+}
+
+.choice_pg1 {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.choice1 > button {
+  background-color: #1b51f4;
+  border-radius: 20px;
+  color: white;
+  padding: 2vh 5vw;
+  text-align: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.choice1 > button:hover {
+  background-color: black;
+}
+
+.choice2 > button {
+  background-color: #1b51f4;
+  border-radius: 20px;
+  color: white;
+  padding: 2vh 5vw;
+  text-align: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.choice2 > button:hover {
+  background-color: black;
+}
+
+.edit_button {
+  border: none;
+  outline: none;
+}
+
+.edit_image {
+  height: 42px;
+  width: 42px;
+}
+
+.date_picker {
+  display: flex;
+  justify-content: center;
+}
+
+.confirm_button {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+.confirm_button > button {
+  display: flex;
+  background-color: #1b51f4;
+  border-radius: 20px;
+  color: white;
+  padding: 2vh 5vw;
+  text-align: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.confirm_button > button:hover {
+  background-color: black;
+}
